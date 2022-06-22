@@ -11,7 +11,7 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "gruvbox"
+    colorscheme = "nord"
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
@@ -41,23 +41,52 @@ name = "lang#python"
 enabled_linters = ['python', 'pylint']
 format_on_save = true
 
-
 [[layers]]
 # Rust Config
 name = "lang#rust"
 recommended_style = true
 format_on_save = true
 
-
 [[layers]]
   name = "lsp"
   enabled_clients = ['rustup', 'run', 'nightly', 'rls']
-
-
-
+  
+[[layers]]
+  name = "lsp"
+  filetypes = [
+    "rust"
+  ]
+  [layers.override_cmd]
+    rust = ["rls"]
 
 
 [[layers]]
 name = 'shell'
 default_position = 'top'
 default_height = 30
+
+[[layers]]
+  name = "colorscheme"
+
+
+#=============================================
+#custom plugins
+#=============================================
+
+[[custom_plugins]]
+  repo = "https://github.com/vim-airline/vim-airline"
+  merged = 0
+  
+[[custom_plugins]]
+  repo = "https://github.com/vim-airline/vim-airline-themes"
+  merged = 0
+  
+[[custom_plugins]]
+  repo = "https://github.com/frazrepo/vim-rainbow"
+  merged = 0
+  
+[[custom_plugins]]
+  repo = "https://github.com/tpope/vim-fugitive"
+  merged = 0
+  
+
